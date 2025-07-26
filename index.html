@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,164 +8,165 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    .dark-mode {
-      background-color: #0f172a;
-      color: white;
-    }
-    .dark-mode .card {
-      background-color: #1e293b;
-    }
+    html { scroll-behavior: smooth; }
+    .dark-mode { background-color: #0f172a; color: white; }
+    .dark-mode .card { background-color: #1e293b; }
   </style>
 </head>
-
 <body class="bg-white text-gray-900 transition-all duration-300">
-  <!-- Navbar -->
-  <header class="fixed w-full top-0 z-50 bg-white dark:bg-gray-900 shadow-md">
-    <div class="container mx-auto flex justify-between items-center p-4">
-      <h1 class="text-2xl font-bold">Vikas Kumar</h1>
-      <nav>
-        <button id="menuBtn" class="md:hidden text-2xl">
-          <i class="fas fa-bars"></i>
-        </button>
-        <ul id="menu" class="hidden md:flex space-x-6">
-          <li><a href="#about" class="hover:text-blue-600">About</a></li>
-          <li><a href="#skills" class="hover:text-blue-600">Skills</a></li>
-          <li><a href="#projects" class="hover:text-blue-600">Projects</a></li>
-          <li><a href="#blog" class="hover:text-blue-600">Blog</a></li>
-          <li><a href="#resume" class="hover:text-blue-600">Resume</a></li>
-          <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
-        </ul>
-      </nav>
-      <button id="darkToggle" class="ml-4 text-xl">
-        🌙
-      </button>
-    </div>
-  </header>
 
-  <!-- Hero Section -->
-  <section id="about" class="pt-24 pb-16 bg-gradient-to-r from-blue-100 to-indigo-100 dark:from-gray-800 dark:to-gray-700">
-    <div class="container mx-auto text-center" data-aos="fade-up">
-      <h2 class="text-4xl font-bold mb-4">Hi, I'm Vikas Kumar</h2>
-      <p class="text-lg max-w-2xl mx-auto">A passionate Automation Test Engineer with 4.5+ years of experience in Web, Mobile & API testing using Selenium, Appium, Rest Assured, and BDD Frameworks.</p>
-    </div>
-  </section>
+<!-- Navbar -->
+<header class="fixed w-full top-0 z-50 bg-white dark:bg-gray-900 shadow-md">
+  <div class="container mx-auto flex justify-between items-center p-4">
+    <h1 class="text-2xl font-bold">Vikas Kumar</h1>
+    <nav>
+      <button id="menuBtn" class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
+      <ul id="menu" class="hidden md:flex space-x-6">
+        <li><a href="#about" class="hover:text-blue-600">About</a></li>
+        <li><a href="#skills" class="hover:text-blue-600">Skills</a></li>
+        <li><a href="#projects" class="hover:text-blue-600">Projects</a></li>
+        <li><a href="#experience" class="hover:text-blue-600">Experience</a></li>
+        <li><a href="#blog" class="hover:text-blue-600">Blog</a></li>
+        <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="darkToggle" class="ml-4 text-xl">🌙</button>
+  </div>
+</header>
 
-  <!-- Skills -->
-  <section id="skills" class="py-16">
-    <div class="container mx-auto" data-aos="fade-up">
-      <h2 class="text-3xl font-semibold text-center mb-10">Skills & Tech Stack</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-        <div class="p-4 bg-white dark:bg-gray-800 rounded shadow">Selenium</div>
-        <div class="p-4 bg-white dark:bg-gray-800 rounded shadow">Appium</div>
-        <div class="p-4 bg-white dark:bg-gray-800 rounded shadow">Java</div>
-        <div class="p-4 bg-white dark:bg-gray-800 rounded shadow">Cucumber / BDD</div>
-        <div class="p-4 bg-white dark:bg-gray-800 rounded shadow">Rest Assured</div>
-        <div class="p-4 bg-white dark:bg-gray-800 rounded shadow">TestNG</div>
-        <div class="p-4 bg-white dark:bg-gray-800 rounded shadow">Git / Jenkins</div>
-        <div class="p-4 bg-white dark:bg-gray-800 rounded shadow">Postman / SQL</div>
-      </div>
-    </div>
-  </section>
+<!-- About -->
+<section id="about" class="pt-24 pb-16 bg-gradient-to-r from-blue-100 to-indigo-100 dark:from-gray-800 dark:to-gray-700">
+  <div class="container mx-auto text-center" data-aos="fade-up">
+    <h2 class="text-4xl font-bold mb-4">Hi, I'm Vikas Kumar</h2>
+    <p class="text-lg max-w-2xl mx-auto">
+      Software Developer Engineer in Test (SDET) with 4.5+ years of experience in manual and automation
+      testing (Web, API, Mobile). Expertise in Selenium, Appium, Rest Assured, CI/CD pipelines (Jenkins, GitLab CI),
+      and Agile methodologies. Proven ability to design scalable automation frameworks (POM, BDD),
+      execute functional/regression tests, and ensure end-to-end quality assurance for enterprise applications.
+    </p>
+  </div>
+</section>
 
-  <!-- Projects -->
-  <section id="projects" class="py-16 bg-gray-100 dark:bg-gray-900">
-    <div class="container mx-auto" data-aos="fade-up">
-      <h2 class="text-3xl font-semibold text-center mb-10">Projects</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="card p-4 bg-white dark:bg-gray-800 rounded shadow hover:scale-105 transform transition-all">
-          <h3 class="font-bold text-xl mb-2">PharmaKart</h3>
-          <p>E-Commerce Pharmacy App - Automated UI, API, Mobile Testing.</p>
-        </div>
-        <div class="card p-4 bg-white dark:bg-gray-800 rounded shadow hover:scale-105 transform transition-all">
-          <h3 class="font-bold text-xl mb-2">Zoho CRM Testing</h3>
-          <p>Sales & Leads Module Automation using Selenium, TestNG.</p>
-        </div>
-        <div class="card p-4 bg-white dark:bg-gray-800 rounded shadow hover:scale-105 transform transition-all">
-          <h3 class="font-bold text-xl mb-2">Amazon Support Testing</h3>
-          <p>Regression + Exploratory Testing with Reporting Integration.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Blog -->
-  <section id="blog" class="py-16">
-    <div class="container mx-auto" data-aos="fade-up">
-      <h2 class="text-3xl font-semibold text-center mb-10">Blog</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="card p-4 bg-white dark:bg-gray-800 rounded shadow cursor-pointer" onclick="openModal('modal1')">
-          <h3 class="font-bold text-xl mb-2">5 Tips for Flaky Test Automation</h3>
-          <p>Learn how to stabilize your automation scripts...</p>
-        </div>
-        <div class="card p-4 bg-white dark:bg-gray-800 rounded shadow cursor-pointer" onclick="openModal('modal2')">
-          <h3 class="font-bold text-xl mb-2">BDD vs TDD: What QA Should Know</h3>
-          <p>Understanding modern development practices...</p>
-        </div>
-        <div class="card p-4 bg-white dark:bg-gray-800 rounded shadow cursor-pointer" onclick="openModal('modal3')">
-          <h3 class="font-bold text-xl mb-2">REST API Automation Framework</h3>
-          <p>Step-by-step design of scalable API test frameworks...</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Resume -->
-  <section id="resume" class="py-16 bg-gray-100 dark:bg-gray-900">
-    <div class="container mx-auto text-center" data-aos="fade-up">
-      <h2 class="text-3xl font-semibold mb-6">Resume</h2>
-      <a href="resume.pdf" download class="px-6 py-2 bg-blue-600 text-white rounded shadow hover:bg-blue-700">Download Resume (PDF)</a>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="py-16">
-    <div class="container mx-auto text-center" data-aos="fade-up">
-      <h2 class="text-3xl font-semibold mb-6">Contact</h2>
-      <p>Email: <a href="mailto:vikaskumaras100@gmail.com" class="text-blue-600">vikaskumaras100@gmail.com</a></p>
-      <p>Phone: <a href="tel:+919015531475" class="text-blue-600">+91 9015531475</a></p>
-      <div class="mt-4 flex justify-center space-x-4">
-        <a href="https://www.linkedin.com/in/vikas-kumar-55531136a" target="_blank" class="text-2xl text-blue-700">
-          <i class="fab fa-linkedin"></i>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Blog Modals -->
-  <div id="modal1" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-    <div class="bg-white dark:bg-gray-800 p-6 rounded max-w-xl">
-      <h3 class="text-2xl font-bold mb-2">5 Tips for Flaky Test Automation</h3>
-      <p>Full content goes here...</p>
-      <button onclick="closeModal('modal1')" class="mt-4 text-blue-600">Close</button>
+<!-- Skills -->
+<section id="skills" class="py-16">
+  <div class="container mx-auto" data-aos="fade-up">
+    <h2 class="text-3xl font-semibold text-center mb-10">Skills & Tech Stack</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div class="p-4 bg-white dark:bg-gray-800 rounded shadow">Java</div>
+      <div class="p-4 bg-white dark:bg-gray-800 rounded shadow">Selenium</div>
+      <div class="p-4 bg-white dark:bg-gray-800 rounded shadow">Appium</div>
+      <div class="p-4 bg-white dark:bg-gray-800 rounded shadow">Rest Assured</div>
+      <div class="p-4 bg-white dark:bg-gray-800 rounded shadow">TestNG</div>
+      <div class="p-4 bg-white dark:bg-gray-800 rounded shadow">Cucumber</div>
+      <div class="p-4 bg-white dark:bg-gray-800 rounded shadow">Git, Jenkins</div>
+      <div class="p-4 bg-white dark:bg-gray-800 rounded shadow">Postman, JIRA, SQL</div>
     </div>
   </div>
+</section>
 
-  <!-- Repeat modals for modal2, modal3 similarly... -->
+<!-- Projects -->
+<section id="projects" class="py-16 bg-gray-100 dark:bg-gray-900">
+  <div class="container mx-auto" data-aos="fade-up">
+    <h2 class="text-3xl font-semibold text-center mb-10">Projects</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="card p-4 bg-white dark:bg-gray-800 rounded shadow hover:scale-105 transform transition-all">
+        <h3 class="font-bold text-xl mb-2">E-Commerce Pharmacy Website</h3>
+        <p>Web-based platform selling cosmetics and healthcare products. Automated Web, Mobile, and API tests using POM, Selenium, Appium, and Rest Assured.</p>
+      </div>
+      <div class="card p-4 bg-white dark:bg-gray-800 rounded shadow hover:scale-105 transform transition-all">
+        <h3 class="font-bold text-xl mb-2">Progressive Content Platform</h3>
+        <p>B2B content marketing web app. Test automation implemented for UI and APIs using scalable Selenium + TestNG framework.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
+<!-- Experience -->
+<section id="experience" class="py-16">
+  <div class="container mx-auto" data-aos="fade-up">
+    <h2 class="text-3xl font-semibold text-center mb-10">Professional Experience</h2>
+    <div class="bg-white dark:bg-gray-800 p-6 rounded shadow">
+      <h3 class="text-xl font-bold mb-2">WebSFDC Technologies — SDET (Mar 2021 – Present)</h3>
+      <ul class="list-disc ml-6 space-y-2 text-left">
+        <li>Designed/executed test cases for web, mobile, and API apps using business requirements and user stories</li>
+        <li>Performed end-to-end manual testing (Functional, Regression, Smoke, Sanity, UAT)</li>
+        <li>Built Selenium WebDriver framework (Java/TestNG) using POM, reducing regression effort by 60–80%</li>
+        <li>Developed Appium scripts for Android/iOS (real devices/emulators + gesture testing)</li>
+        <li>Tracked defects in JIRA with full traceability across Agile sprints</li>
+        <li>Conducted API testing via Postman, automated with Rest Assured</li>
+        <li>Documented test artifacts (RTM, bug reports) in TestRail</li>
+        <li>Mentored junior QAs on automation best practices</li>
+        <li>Reduced test execution time by 40% via optimized automation scripts</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-    // Dark Mode
-    const darkToggle = document.getElementById('darkToggle');
-    darkToggle.onclick = () => document.body.classList.toggle('dark-mode');
+<!-- Blog -->
+<section id="blog" class="py-16">
+  <div class="container mx-auto" data-aos="fade-up">
+    <h2 class="text-3xl font-semibold text-center mb-10">Blog</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="card p-4 bg-white dark:bg-gray-800 rounded shadow cursor-pointer" onclick="openModal('modal1')">
+        <h3 class="font-bold text-xl mb-2">5 Tips for Flaky Test Automation</h3>
+        <p>Learn how to stabilize your automation scripts...</p>
+      </div>
+      <div class="card p-4 bg-white dark:bg-gray-800 rounded shadow cursor-pointer" onclick="openModal('modal2')">
+        <h3 class="font-bold text-xl mb-2">BDD vs TDD: What QA Should Know</h3>
+        <p>Understanding modern development practices...</p>
+      </div>
+      <div class="card p-4 bg-white dark:bg-gray-800 rounded shadow cursor-pointer" onclick="openModal('modal3')">
+        <h3 class="font-bold text-xl mb-2">REST API Automation Framework</h3>
+        <p>Step-by-step design of scalable API test frameworks...</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    // Mobile Menu
-    document.getElementById('menuBtn').addEventListener('click', () => {
-      document.getElementById('menu').classList.toggle('hidden');
-    });
+<!-- Resume -->
+<section id="resume" class="py-16 bg-gray-100 dark:bg-gray-900">
+  <div class="container mx-auto text-center" data-aos="fade-up">
+    <h2 class="text-3xl font-semibold mb-6">Resume</h2>
+    <a href="resume.pdf" download class="px-6 py-2 bg-blue-600 text-white rounded shadow hover:bg-blue-700">Download Resume (PDF)</a>
+  </div>
+</section>
 
-    // Blog Modals
-    function openModal(id) {
-      document.getElementById(id).classList.remove('hidden');
-    }
-    function closeModal(id) {
-      document.getElementById(id).classList.add('hidden');
-    }
-  </script>
+<!-- Contact -->
+<section id="contact" class="py-16">
+  <div class="container mx-auto text-center" data-aos="fade-up">
+    <h2 class="text-3xl font-semibold mb-6">Contact</h2>
+    <p>Email: <a href="mailto:vikaskumaras100@gmail.com" class="text-blue-600">vikaskumaras100@gmail.com</a></p>
+    <p>Phone: <a href="tel:+919015531475" class="text-blue-600">+91 9015531475</a></p>
+    <div class="mt-4 flex justify-center space-x-4">
+      <a href="https://www.linkedin.com/in/vikas-kumar-55531136a" target="_blank" class="text-2xl text-blue-700">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Blog Modals -->
+<div id="modal1" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+  <div class="bg-white dark:bg-gray-800 p-6 rounded max-w-xl">
+    <h3 class="text-2xl font-bold mb-2">5 Tips for Flaky Test Automation</h3>
+    <p>Avoid hard-coded waits, flaky locators, inconsistent environments, and skipping validations.</p>
+    <button onclick="closeModal('modal1')" class="mt-4 text-blue-600">Close</button>
+  </div>
+</div>
+<!-- More modals (modal2, modal3) same structure... -->
+
+<!-- Footer -->
+<footer class="text-center py-6 text-gray-500 dark:text-gray-400 text-sm">
+  &copy; 2025 Vikas Kumar. All rights reserved.
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+  document.getElementById('darkToggle').onclick = () => document.body.classList.toggle('dark-mode');
+  document.getElementById('menuBtn').onclick = () => document.getElementById('menu').classList.toggle('hidden');
+  function openModal(id) { document.getElementById(id).classList.remove('hidden'); }
+  function closeModal(id) { document.getElementById(id).classList.add('hidden'); }
+</script>
 </body>
-
 </html>
