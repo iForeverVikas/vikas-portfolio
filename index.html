@@ -469,34 +469,32 @@
                 </div>
                 
                 <!-- Contact Form -->
-<form action="https://formspree.io/f/mnnzdolq" method="POST" class="space-y-6">
-    <input type="hidden" name="_captcha" value="false">
-    
-    <div>
-        <input type="text" name="name" placeholder="Your Name" required
-            class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:border-blue-500 focus:outline-none text-white">
+ <div class="fade-in">
+        <h3 class="text-2xl font-semibold mb-8">Send Message</h3>
+        <form action="https://getform.io/f/aoloppvb" method="POST" class="space-y-6">
+          <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white">
+          <input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white">
+          <textarea name="message" rows="5" placeholder="Your Message" required class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white resize-none"></textarea>
+          <input type="hidden" name="_gotcha" style="display:none !important">
+          <input type="checkbox" name="subscribe" value="yes" checked class="form-checkbox text-blue-600">
+          <label class="text-gray-300">Subscribe to newsletter</label>
+          <input type="hidden" name="subscribe" value="no">
+          <div class="text-gray-300">
+            <label class="mr-4">Gender:</label>
+            <label class="mr-2"><input type="radio" name="gender" value="male" checked> Male</label>
+            <label class="mr-2"><input type="radio" name="gender" value="female"> Female</label>
+            <label><input type="radio" name="gender" value="other"> Other</label>
+          </div>
+          <select name="work-experience" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white">
+            <option value="one-year">0-1 years</option>
+            <option value="one-five-years">1-5 years</option>
+          </select>
+          <button type="submit" class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700">Send Message</button>
+        </form>
+      </div>
     </div>
-    
-    <div>
-        <input type="email" name="email" placeholder="Your Email" required
-            class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:border-blue-500 focus:outline-none text-white">
-    </div>
-    
-    <div>
-        <textarea name="message" rows="5" placeholder="Your Message" required
-            class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:border-blue-500 focus:outline-none text-white resize-none"></textarea>
-    </div>
-    
-    <button type="submit"
-        class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-        Send Message
-    </button>
-</form>
-
-                </div>
-            </div>
-        </div>
-    </section>
+  </div>
+</section>
 
     <!-- Footer -->
     <footer class="bg-black text-white py-8">
