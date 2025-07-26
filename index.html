@@ -123,25 +123,30 @@
       color: #000000 !important;
     }
 
-    /* Scroll Down Indicator Button styles */
+    /* Scroll Down Indicator Button styles - smaller */
     .scroll-down-btn {
       position: fixed;
-      bottom: 1.5rem;
-      right: 1.5rem;
+      bottom: 1rem;
+      right: 1rem;
       z-index: 9999;
       background-color: rgba(255, 255, 255, 0.85);
       border-radius: 9999px;
-      padding: 0.75rem;
+      padding: 0.4rem;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       cursor: pointer;
       transition: background-color 0.3s ease;
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .scroll-down-btn:hover {
       background-color: rgba(255, 255, 255, 1);
     }
     .scroll-down-btn svg {
-      width: 1.5rem;
-      height: 1.5rem;
+      width: 1.2rem;
+      height: 1.2rem;
       color: #2563eb; /* Tailwind Blue 600 */
       animation: bounce 2s infinite;
     }
@@ -167,10 +172,7 @@
         <!-- Mobile Menu Button -->
         <button id="mobile-menu-btn" class="md:hidden text-gray-700"><i class="fas fa-bars text-xl"></i></button>
 
-        <!-- Theme Toggle Button -->
-        <button id="mode-toggle-btn" class="ml-4 text-gray-700 hover:text-green-600 transition-colors focus:outline-none" aria-label="Toggle theme" title="Toggle Theme">
-          <i class="fas fa-leaf text-xl"></i>
-        </button>
+        <!-- Theme Toggle Button removed -->
       </div>
     </div>
     <div id="mobile-menu" class="md:hidden hidden bg-white/95 backdrop-blur-md">
@@ -637,36 +639,6 @@
           targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
         }
       });
-    });
-
-    // Theme Toggle Logic
-    const modeToggleBtn = document.getElementById("mode-toggle-btn");
-    const body = document.body;
-
-    // Load saved theme on page load
-    window.addEventListener("load", () => {
-      if (localStorage.getItem("theme") === "dark-green") {
-        body.classList.add("dark-green-mode");
-        if (modeToggleBtn) {
-          modeToggleBtn.innerHTML = '<i class="fas fa-sun text-yellow-400"></i>';
-          modeToggleBtn.title = "Switch to Light Theme";
-        }
-      }
-    });
-
-    // Toggle button click
-    modeToggleBtn.addEventListener("click", () => {
-      const isDarkGreen = body.classList.toggle("dark-green-mode");
-
-      if (isDarkGreen) {
-        modeToggleBtn.innerHTML = '<i class="fas fa-sun text-yellow-400"></i>';
-        modeToggleBtn.title = "Switch to Light Theme";
-        localStorage.setItem("theme", "dark-green");
-      } else {
-        modeToggleBtn.innerHTML = '<i class="fas fa-leaf text-xl"></i>';
-        modeToggleBtn.title = "Switch to Dark Green Theme";
-        localStorage.setItem("theme", "light");
-      }
     });
   </script>
 </body>
