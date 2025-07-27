@@ -16,6 +16,7 @@
     }
     .card-hover {
       transition: all 0.3s ease;
+      cursor: pointer;
     }
     .card-hover:hover {
       transform: translateY(-10px) scale(1.02);
@@ -109,6 +110,67 @@
     .scroll-down-btn:hover { background-color: rgba(255,255,255,1); }
     .scroll-down-btn svg {
       width: 1.2rem; height: 1.2rem; color: #2563eb; animation: bounce 2s infinite;
+    }
+    /* Modal Styles */
+    .modal-bg {
+      background-color: rgba(0,0,0,0.6);
+      position: fixed;
+      top: 0; left: 0; right:0; bottom:0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+    .modal-bg.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .modal {
+      background: white;
+      border-radius: 0.75rem;
+      max-width: 600px;
+      max-height: 80vh;
+      overflow-y: auto;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      padding: 2rem;
+      position: relative;
+      margin: 1rem;
+    }
+    .modal h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #2563eb; /* Tailwind Blue 600 */
+    }
+    .modal p {
+      margin-bottom: 1rem;
+      color: #374151; /* Tailwind Gray 700 */
+    }
+    .modal ul {
+      margin-left: 1.25rem;
+      list-style-type: disc;
+      color: #4b5563; /* Tailwind Gray 600 */
+      margin-bottom: 1.5rem;
+    }
+    .modal ul li {
+      margin-bottom: 0.5rem;
+    }
+    .modal-close {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      background: transparent;
+      border: none;
+      font-size: 1.5rem;
+      color: #6b7280; /* Tailwind Gray 500 */
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
+    .modal-close:hover {
+      color: #111827; /* Tailwind Gray 900 */
     }
   </style>
 </head>
@@ -253,7 +315,7 @@
     </button>
   </section>
 
-  <!-- PROJECTS SECTION (Tile Style) -->
+  <!-- PROJECTS SECTION (Tile Style, Clickable) -->
   <section id="projects" class="py-20 bg-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16 fade-in">
@@ -262,7 +324,8 @@
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 fade-in">
         <!-- Project 1 -->
-        <div class="bg-white p-6 rounded-xl shadow-lg card-hover flex flex-col items-center text-center">
+        <div class="bg-white p-6 rounded-xl shadow-lg card-hover flex flex-col items-center text-center"
+             data-project="project1" tabindex="0" role="button" aria-pressed="false" aria-label="Open details for E-Commerce Website (Pharmacy)">
           <i class="fas fa-prescription-bottle-alt text-4xl text-blue-600 mb-4"></i>
           <h3 class="text-xl font-semibold text-gray-900 mb-2">E-Commerce Website (Pharmacy)</h3>
           <p class="text-gray-700">
@@ -271,7 +334,8 @@
           </p>
         </div>
         <!-- Project 2 -->
-        <div class="bg-white p-6 rounded-xl shadow-lg card-hover flex flex-col items-center text-center">
+        <div class="bg-white p-6 rounded-xl shadow-lg card-hover flex flex-col items-center text-center"
+             data-project="project2" tabindex="0" role="button" aria-pressed="false" aria-label="Open details for Progressive Content Platform">
           <i class="fas fa-bullhorn text-4xl text-purple-600 mb-4"></i>
           <h3 class="text-xl font-semibold text-gray-900 mb-2">Progressive Content Platform</h3>
           <p class="text-gray-700">
@@ -287,6 +351,43 @@
       </svg>
     </button>
   </section>
+
+  <!-- MODALS -->
+  <!-- Modal for Project 1 -->
+  <div id="modal-project1" class="modal-bg" role="dialog" aria-modal="true" aria-labelledby="modal1-title" tabindex="-1" hidden>
+    <div class="modal">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <h3 id="modal1-title">E-Commerce Website (Pharmacy)</h3>
+      <p><strong>Role:</strong> SDET – Architect, Manual & Automation Tester</p>
+      <p><strong>Description:</strong> Developed and tested an online platform for purchasing cosmetics and healthcare products, ensuring seamless UX for product search, cart management, payments, and order processing.</p>
+      <p><strong>Key Features and Responsibilities:</strong></p>
+      <ul>
+        <li>Designed comprehensive manual and automated test suites covering functional, regression, integration, and UAT scenarios.</li>
+        <li>Built a robust Selenium (Java/TestNG, POM) automation framework, reducing regression cycles by up to 80%.</li>
+        <li>Validated cross-browser and cross-device compatibility for reliability.</li>
+        <li>Streamlined test execution via CI/CD with Jenkins & GitLab for faster releases.</li>
+        <li>Used JIRA and TestRail for bug tracking, traceability, and reporting.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Modal for Project 2 -->
+  <div id="modal-project2" class="modal-bg" role="dialog" aria-modal="true" aria-labelledby="modal2-title" tabindex="-1" hidden>
+    <div class="modal">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <h3 id="modal2-title">Progressive Content Platform</h3>
+      <p><strong>Role:</strong> Senior SDET – QA Lead</p>
+      <p><strong>Description:</strong> Led quality engineering for a B2B SaaS solution enabling organizations to automate and personalize their content communication strategies.</p>
+      <p><strong>Key Features and Responsibilities:</strong></p>
+      <ul>
+        <li>Automated API validation using Rest Assured with data-driven tests for REST/JSON endpoints.</li>
+        <li>Implemented mobile automation using Appium for Android/iOS, including real device and gesture testing.</li>
+        <li>Drove test strategy for new features (personalization, analytics), ensuring coverage and requirement traceability.</li>
+        <li>Mentored and uplifted team automation practices, improving delivery standards by 40%.</li>
+        <li>Integrated non-functional quality checks (performance, security, accessibility) into release pipelines.</li>
+      </ul>
+    </div>
+  </div>
 
   <!-- PROFESSIONAL SUMMARY -->
   <section id="professional-summary" class="py-20 bg-white">
@@ -456,12 +557,16 @@
       </div>
     </div>
   </footer>
+
   <script>
+    // Mobile menu toggle
     const mobileMenuBtn = document.getElementById("mobile-menu-btn");
     const mobileMenu = document.getElementById("mobile-menu");
     mobileMenuBtn.addEventListener("click", () => {
       mobileMenu.classList.toggle("hidden");
     });
+
+    // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener("click", function (e) {
         e.preventDefault();
@@ -475,6 +580,8 @@
         }
       });
     });
+
+    // Fade in animation on scroll
     const observerOptions = {
       threshold: 0.1,
       rootMargin: "0px 0px -50px 0px",
@@ -489,6 +596,8 @@
     document.querySelectorAll(".fade-in").forEach((el) => {
       observer.observe(el);
     });
+
+    // Create floating particles
     function createParticle() {
       const particle = document.createElement("div");
       particle.className = "particle";
@@ -503,6 +612,8 @@
       }, 9000);
     }
     setInterval(createParticle, 300);
+
+    // Active navigation highlighting
     window.addEventListener("scroll", () => {
       const sections = document.querySelectorAll("section[id]");
       const navLinks = document.querySelectorAll('nav a[href^="#"]');
@@ -522,6 +633,8 @@
         }
       });
     });
+
+    // Contact form submission alert
     const contactForm = document.querySelector("form");
     if (contactForm) {
       contactForm.addEventListener("submit", function (e) {
@@ -530,6 +643,8 @@
         this.reset();
       });
     }
+
+    // Resume download alert
     document.querySelectorAll("button, a").forEach((element) => {
       if (
         element.textContent.includes("Download Resume") ||
@@ -544,14 +659,66 @@
         });
       }
     });
-    document.querySelectorAll(".card-hover").forEach((card) => {
-      card.addEventListener("mouseenter", function () {
-        this.style.transform = "translateY(-10px) scale(1.02)";
+
+    // Card hover & click to open modal for projects
+    const projectCards = document.querySelectorAll('[data-project]');
+    const modals = document.querySelectorAll('.modal-bg');
+
+    projectCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const projectId = card.getAttribute('data-project');
+        const modal = document.getElementById(`modal-${projectId}`);
+        if (modal) {
+          openModal(modal);
+        }
       });
-      card.addEventListener("mouseleave", function () {
-        this.style.transform = "translateY(0) scale(1)";
+      // Support keyboard accessibility (Enter or Space)
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          const projectId = card.getAttribute('data-project');
+          const modal = document.getElementById(`modal-${projectId}`);
+          if (modal) {
+            openModal(modal);
+          }
+        }
       });
     });
+
+    function openModal(modal) {
+      modal.hidden = false;
+      modal.classList.add('active');
+      // Focus the close button for accessibility
+      const closeButton = modal.querySelector('.modal-close');
+      closeButton.focus();
+    }
+
+    function closeModal(modal) {
+      modal.classList.remove('active');
+      modal.hidden = true;
+    }
+
+    modals.forEach(modal => {
+      // Close button click
+      const closeButton = modal.querySelector('.modal-close');
+      closeButton.addEventListener('click', () => closeModal(modal));
+
+      // Close when clicking outside modal content
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          closeModal(modal);
+        }
+      });
+
+      // Close on ESC key
+      modal.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeModal(modal);
+        }
+      });
+    });
+
+    // Loading animation
     window.addEventListener("load", function () {
       document.body.style.opacity = "0";
       document.body.style.transition = "opacity 0.5s ease";
@@ -559,6 +726,8 @@
         document.body.style.opacity = "1";
       }, 100);
     });
+
+    // Parallax effect for hero-about
     window.addEventListener("scroll", function () {
       const scrolled = window.pageYOffset;
       const hero = document.querySelector("#hero-about");
@@ -567,6 +736,8 @@
         hero.style.transform = `translateY(${rate}px)`;
       }
     });
+
+    // Konami code easter egg
     let konamiCode = [];
     const konamiSequence = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
     document.addEventListener("keydown", function (e) {
@@ -594,6 +765,8 @@
       }
     `;
     document.head.appendChild(style);
+
+    // Scroll Down Button Logic for all scroll buttons except last page
     document.querySelectorAll(".scroll-down-btn").forEach((btn) => {
       btn.addEventListener("click", () => {
         const targetId = btn.getAttribute("data-target");
