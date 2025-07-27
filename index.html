@@ -5,10 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vikas Kumar - SDET Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    rel="stylesheet"
-  />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
     * {
@@ -69,61 +66,29 @@
         opacity: 0;
       }
     }
-
     /* Dark Green Theme Mode Overrides */
     body.dark-green-mode {
-      background-color: #0f2d0f; /* Dark green background */
-      color: white !important; /* Change font color to white */
-    }
-
-    /* Additional global font color override in dark-green-mode */
-    body.dark-green-mode * {
+      background-color: #0f2d0f;
       color: white !important;
     }
-
-    body.dark-green-mode nav {
-      background-color: rgba(6, 95, 6, 0.9); /* Dark transparent green nav */
-      color: #a3d8a3;
-    }
-
-    body.dark-green-mode a,
-    body.dark-green-mode a:hover,
-    body.dark-green-mode nav a {
-      color: #7ee08e !important; /* Lighter green for links */
-    }
-
-    body.dark-green-mode .bg-white {
-      background-color: #145214 !important;
-      color: #b8e6ba !important;
-    }
-
-    body.dark-green-mode .bg-gray-50 {
-      background-color: #123812 !important;
-    }
-
-    body.dark-green-mode input,
-    body.dark-green-mode textarea,
-    body.dark-green-mode select {
+    body.dark-green-mode * { color: white !important; }
+    body.dark-green-mode nav { background-color: rgba(6, 95, 6, 0.9); color: #a3d8a3; }
+    body.dark-green-mode a, body.dark-green-mode a:hover, body.dark-green-mode nav a { color: #7ee08e !important; }
+    body.dark-green-mode .bg-white { background-color: #145214 !important; color: #b8e6ba !important; }
+    body.dark-green-mode .bg-gray-50 { background-color: #123812 !important; }
+    body.dark-green-mode input, body.dark-green-mode textarea, body.dark-green-mode select {
       background-color: #2c5d2c !important;
       color: #b8e6ba !important;
       border-color: #4f8f4f !important;
     }
-
     body.dark-green-mode .card-hover:hover {
       box-shadow: 0 20px 40px rgba(126, 224, 142, 0.6) !important;
     }
-
     body.dark-green-mode footer {
       background-color: #123812 !important;
       color: #90c990 !important;
     }
-
-    /* Education tiles font color override */
-    #education .bg-gradient-to-br {
-      color: #000000 !important;
-    }
-
-    /* Scroll Down Indicator Button styles - smaller */
+    #education .bg-gradient-to-br { color: #000000 !important; }
     .scroll-down-btn {
       position: fixed;
       bottom: 1rem;
@@ -141,14 +106,9 @@
       align-items: center;
       justify-content: center;
     }
-    .scroll-down-btn:hover {
-      background-color: rgba(255, 255, 255, 1);
-    }
+    .scroll-down-btn:hover { background-color: rgba(255,255,255,1); }
     .scroll-down-btn svg {
-      width: 1.2rem;
-      height: 1.2rem;
-      color: #2563eb; /* Tailwind Blue 600 */
-      animation: bounce 2s infinite;
+      width: 1.2rem; height: 1.2rem; color: #2563eb; animation: bounce 2s infinite;
     }
   </style>
 </head>
@@ -164,22 +124,22 @@
         <div class="hidden md:flex space-x-8">
           <a href="#hero-about" class="text-blue-600 transition-colors font-semibold">Home/About</a>
           <a href="#skills" class="text-gray-700 hover:text-blue-600 transition-colors">Skills</a>
-          <a href="#professional" class="text-gray-700 hover:text-blue-600 transition-colors">Professional</a>
+          <a href="#projects" class="text-gray-700 hover:text-blue-600 transition-colors">Projects</a>
+          <a href="#professional-summary" class="text-gray-700 hover:text-blue-600 transition-colors">Professional Summary</a>
+          <a href="#professional-experience" class="text-gray-700 hover:text-blue-600 transition-colors">Professional Experience</a>
           <a href="#education" class="text-gray-700 hover:text-blue-600 transition-colors">Education</a>
           <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors">Get In Touch</a>
         </div>
-
-        <!-- Mobile Menu Button -->
         <button id="mobile-menu-btn" class="md:hidden text-gray-700"><i class="fas fa-bars text-xl"></i></button>
-
-        <!-- Theme Toggle Button removed -->
       </div>
     </div>
     <div id="mobile-menu" class="md:hidden hidden bg-white/95 backdrop-blur-md">
       <div class="px-4 py-2 space-y-2">
         <a href="#hero-about" class="block py-2 text-blue-600 font-semibold">Home/About</a>
         <a href="#skills" class="block py-2 text-gray-700 hover:text-blue-600">Skills</a>
-        <a href="#professional" class="block py-2 text-gray-700 hover:text-blue-600">Professional</a>
+        <a href="#projects" class="block py-2 text-gray-700 hover:text-blue-600">Projects</a>
+        <a href="#professional-summary" class="block py-2 text-gray-700 hover:text-blue-600">Professional Summary</a>
+        <a href="#professional-experience" class="block py-2 text-gray-700 hover:text-blue-600">Professional Experience</a>
         <a href="#education" class="block py-2 text-gray-700 hover:text-blue-600">Education</a>
         <a href="#contact" class="block py-2 text-gray-700 hover:text-blue-600">Get In Touch</a>
       </div>
@@ -212,8 +172,6 @@
           </button>
         </div>
       </div>
-
-      <!-- Scroll Down Indicator Button for Home/About -->
       <button id="scroll-down-btn-hero" aria-label="Scroll down" class="scroll-down-btn" data-target="skills">
         <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
@@ -288,27 +246,68 @@
         </div>
       </div>
     </div>
-
-    <!-- Scroll Down Indicator Button for Skills -->
-    <button id="scroll-down-btn-skills" aria-label="Scroll down" class="scroll-down-btn" data-target="professional">
+    <button id="scroll-down-btn-skills" aria-label="Scroll down" class="scroll-down-btn" data-target="projects">
       <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
       </svg>
     </button>
   </section>
 
-  <!-- Unified Professional Summary / Experience Section -->
-  <section id="professional" class="py-20 bg-white">
+  <!-- PROJECTS SECTION (Tile Style) -->
+  <section id="projects" class="py-20 bg-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- Professional Summary -->
+      <div class="text-center mb-16 fade-in">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Projects</h2>
+        <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 fade-in">
+        <!-- Project 1 -->
+        <div class="bg-white p-6 rounded-xl shadow-lg card-hover flex flex-col items-center text-center">
+          <i class="fas fa-prescription-bottle-alt text-4xl text-blue-600 mb-4"></i>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">E-Commerce Website (Pharmacy)</h3>
+          <p class="text-gray-700">
+            Online platform for purchasing cosmetics and healthcare products.<br>
+            Focus: Web automation, functional & regression testing, CI/CD enablement, cross-browser/device validation.
+          </p>
+        </div>
+        <!-- Project 2 -->
+        <div class="bg-white p-6 rounded-xl shadow-lg card-hover flex flex-col items-center text-center">
+          <i class="fas fa-bullhorn text-4xl text-purple-600 mb-4"></i>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Progressive Content Platform</h3>
+          <p class="text-gray-700">
+            B2B SaaS solution for automating & personalizing content strategies.<br>
+            Focus: API automation, mobile testing (Appium), quality strategy for new features.
+          </p>
+        </div>
+      </div>
+    </div>
+    <button id="scroll-down-btn-projects" aria-label="Scroll down" class="scroll-down-btn" data-target="professional-summary">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+      </svg>
+    </button>
+  </section>
+
+  <!-- PROFESSIONAL SUMMARY -->
+  <section id="professional-summary" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12 fade-in max-w-3xl mx-auto">
         <h2 class="text-4xl font-bold text-gray-900 mb-6">Professional Summary</h2>
         <p class="text-lg text-gray-700 leading-relaxed">
-          I'm Vikas Kumar, an experienced SDET (Software Development Engineer in Test) with over 4.5 years of expertise in automation and manual testing across Web, API, and Mobile platforms. I specialize in tools like Selenium, Appium, Rest Assured, and CI/CD integrations using Jenkins and GitLab. My focus is on building scalable automation frameworks (POM, BDD with Cucumber) and ensuring robust test coverage and faster releases.
+          I'm Vikas Kumar, an accomplished SDET (Software Development Engineer in Test) with over 4.5 years of experience in both automation and manual testing of Web, API, and Mobile applications. My expertise spans Selenium, Appium, Rest Assured, and CI/CD tools such as Jenkins and GitLab. I design scalable frameworks (POM, BDD) to drive high-quality releases and have led QA teams by example in Agile settings.
         </p>
       </div>
+    </div>
+    <button id="scroll-down-btn-prof-summary" aria-label="Scroll down" class="scroll-down-btn" data-target="professional-experience">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+      </svg>
+    </button>
+  </section>
 
-      <!-- Professional Experience -->
+  <!-- PROFESSIONAL EXPERIENCE -->
+  <section id="professional-experience" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16 fade-in">
         <h2 class="text-4xl font-bold text-gray-900 mb-4">Professional Experience</h2>
         <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
@@ -329,11 +328,11 @@
               <div class="space-y-3 text-left">
                 <h5 class="font-semibold text-gray-900">Key Contributions:</h5>
                 <ul class="text-gray-700 space-y-2 list-disc list-inside">
-                  <li>Architected comprehensive test automation frameworks for Web, Mobile, and API testing reducing manual effort by 60-80%</li>
-                  <li>Developed cross-platform mobile automation using Appium for Android/iOS applications with device cloud integration</li>
-                  <li>Implemented robust API testing solutions using Rest Assured with comprehensive validation and contract testing</li>
-                  <li>Led end-to-end testing initiatives across web browsers, mobile devices, and API services ensuring 95+ quality coverage</li>
-                  <li>Mentored QA team on automation best practices and established testing standards improving team productivity by 40%</li>
+                  <li>Architected automation frameworks for Web, Mobile, and API testing, reducing manual effort by 60-80%.</li>
+                  <li>Developed cross-platform mobile automation (Appium) for Android/iOS with device cloud integration.</li>
+                  <li>Implemented API automation (Rest Assured) with contract validation.</li>
+                  <li>Led end-to-end functional and regression test coverage, improving quality to 95+%.</li>
+                  <li>Mentored QA team and standardized processes, raising productivity by 40%.</li>
                 </ul>
               </div>
             </div>
@@ -341,9 +340,7 @@
         </div>
       </div>
     </div>
-
-    <!-- Scroll Down Indicator Button for Professional -->
-    <button id="scroll-down-btn-professional" aria-label="Scroll down" class="scroll-down-btn" data-target="education">
+    <button id="scroll-down-btn-professional-experience" aria-label="Scroll down" class="scroll-down-btn" data-target="education">
       <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
       </svg>
@@ -378,8 +375,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Scroll Down Indicator Button for Education -->
     <button id="scroll-down-btn-education" aria-label="Scroll down" class="scroll-down-btn" data-target="contact">
       <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
@@ -421,7 +416,6 @@
             </div>
           </div>
         </div>
-        
         <div class="fade-in">
           <h3 class="text-2xl font-semibold mb-8">Send Message</h3>
           <form action="https://getform.io/f/aoloppvb" method="POST" class="space-y-6">
@@ -456,23 +450,18 @@
         <div class="mb-4 md:mb-0"><p>&copy; 2025 Vikas Kumar. All rights reserved.</p></div>
         <div class="flex space-x-6">
           <a href="https://www.linkedin.com/in/vikas-kumar-55531136a" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
-          <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-github text-xl"></i></a>
+          <a href="https://github.com/iForeverVikas" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-github text-xl"></i></a>
           <button class="text-gray-400 hover:text-white transition-colors"><i class="fas fa-file-pdf text-xl"></i></button>
         </div>
       </div>
     </div>
   </footer>
-
   <script>
-    // Mobile menu toggle
     const mobileMenuBtn = document.getElementById("mobile-menu-btn");
     const mobileMenu = document.getElementById("mobile-menu");
-
     mobileMenuBtn.addEventListener("click", () => {
       mobileMenu.classList.toggle("hidden");
     });
-
-    // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener("click", function (e) {
         e.preventDefault();
@@ -482,18 +471,14 @@
             behavior: "smooth",
             block: "start",
           });
-          // Close mobile menu if open
           mobileMenu.classList.add("hidden");
         }
       });
     });
-
-    // Fade in animation on scroll
     const observerOptions = {
       threshold: 0.1,
       rootMargin: "0px 0px -50px 0px",
     };
-
     const observer = new IntersectionObserver(function (entries) {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -501,12 +486,9 @@
         }
       });
     }, observerOptions);
-
     document.querySelectorAll(".fade-in").forEach((el) => {
       observer.observe(el);
     });
-
-    // Create floating particles
     function createParticle() {
       const particle = document.createElement("div");
       particle.className = "particle";
@@ -514,8 +496,6 @@
       particle.style.animationDelay = Math.random() * 6 + "s";
       particle.style.animationDuration = Math.random() * 3 + 6 + "s";
       document.getElementById("particles").appendChild(particle);
-
-      // Remove particle after animation
       setTimeout(() => {
         if (particle.parentNode) {
           particle.parentNode.removeChild(particle);
@@ -523,15 +503,12 @@
       }, 9000);
     }
     setInterval(createParticle, 300);
-
-    // Active navigation highlighting
     window.addEventListener("scroll", () => {
       const sections = document.querySelectorAll("section[id]");
       const navLinks = document.querySelectorAll('nav a[href^="#"]');
       let current = "";
       sections.forEach((section) => {
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
         if (pageYOffset >= sectionTop - 200) {
           current = section.getAttribute("id");
         }
@@ -545,8 +522,6 @@
         }
       });
     });
-
-    // Contact form submission alert
     const contactForm = document.querySelector("form");
     if (contactForm) {
       contactForm.addEventListener("submit", function (e) {
@@ -555,8 +530,6 @@
         this.reset();
       });
     }
-
-    // Resume download alert
     document.querySelectorAll("button, a").forEach((element) => {
       if (
         element.textContent.includes("Download Resume") ||
@@ -571,8 +544,6 @@
         });
       }
     });
-
-    // Card hover scaling effect
     document.querySelectorAll(".card-hover").forEach((card) => {
       card.addEventListener("mouseenter", function () {
         this.style.transform = "translateY(-10px) scale(1.02)";
@@ -581,8 +552,6 @@
         this.style.transform = "translateY(0) scale(1)";
       });
     });
-
-    // Loading animation
     window.addEventListener("load", function () {
       document.body.style.opacity = "0";
       document.body.style.transition = "opacity 0.5s ease";
@@ -590,8 +559,6 @@
         document.body.style.opacity = "1";
       }, 100);
     });
-
-    // Parallax effect for hero-about
     window.addEventListener("scroll", function () {
       const scrolled = window.pageYOffset;
       const hero = document.querySelector("#hero-about");
@@ -600,8 +567,6 @@
         hero.style.transform = `translateY(${rate}px)`;
       }
     });
-
-    // Konami code easter egg
     let konamiCode = [];
     const konamiSequence = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
     document.addEventListener("keydown", function (e) {
@@ -629,8 +594,6 @@
       }
     `;
     document.head.appendChild(style);
-
-    // Scroll Down Button Logic for all scroll buttons except last page
     document.querySelectorAll(".scroll-down-btn").forEach((btn) => {
       btn.addEventListener("click", () => {
         const targetId = btn.getAttribute("data-target");
